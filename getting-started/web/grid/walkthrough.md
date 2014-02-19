@@ -159,7 +159,8 @@ because Javascript size calculations do not work for elements with a `display:no
 If virtual scrolling is **not used**, there are several options:
 
 * The Grid should be initialized when its element becomes visible;
-* The Grid's layout must be adjusted manually, using code from the above example (no need to attach a window resize handler);
+* The Grid's layout must be adjusted manually. With old Kendo UI versions, use the code from the above example (there is no need to attach a window resize handler). Since Q3 2013,
+you can use [`kendo.resize()`](/kendo-ui/api/framework/kendo/#methods-resize) or the Grid's [`resize()`](/kendo-ui/getting-started/using-kendo-with/using-kendo-in-responsive-web-pages#individual-widget-resizing) method.
 * Instead of setting an overall height for the Grid in its configuration, you can define height for the scrollable data area only. In this case no height calculations will be made:
 
         #GridID .k-grid-content
@@ -167,7 +168,8 @@ If virtual scrolling is **not used**, there are several options:
             height: 270px;
         }
 
-If **virtual scrolling is used** and the Grid is initialized while hidden, its dataSource should be refetched when the widget becomes visible. This will also readjust the scrollable data area's height and no other coding is required.
+If **virtual scrolling is used** and the Grid is initialized while hidden, its dataSource should be refetched when the widget becomes visible.
+This will also readjust the scrollable data area's height and no other coding is required.
 
     $("#GridID").data("kendoGrid").dataSource.fetch();
 
