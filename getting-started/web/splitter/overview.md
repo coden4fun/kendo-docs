@@ -226,10 +226,9 @@ should be executed, so that the widget readjusts its layout and pane sizes.
     // for versions Q2 2013 SP1 and older use this instead:
     //splitterObject.trigger("resize");
 
-If the Splitter layout needs readjusting, but the dimensions of the Splitter wrapper `<div>` has not changed, the resize method must be executed with a parameter in order to take effect:
+If the Splitter layout needs readjusting, but the dimensions of the Splitter wrapper `<div>` have not changed, the `resize` method must be executed with a parameter in order to take effect.
+This is useful when the Splitter has been initialized in an invisible container and the panes' dimensions and position have not been calculated correctly.
 
     splitterObject.resize(true);
-
-The latter is also useful when the Splitter has been initialized while its container is invisible. In such cases the panes' dimensions and position cannot be calculated correctly until the widget becomes visible.
     
-Changing the the pane sizes manually is not recommended. Only the Splitter should control them.
+On a side note, changing the the pane sizes manually is not recommended. Only the Splitter should control them.
