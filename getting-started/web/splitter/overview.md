@@ -230,4 +230,6 @@ If the Splitter layout needs readjusting, but the dimensions of the Splitter wra
 
     splitterObject.resize(true);
 
+The latter is also useful when the Splitter has been initialized while its container is invisible. In such cases the panes' dimensions and position cannot be calculated correctly until the widget becomes visible.
+    
 Changing the the pane sizes manually is not recommended. Only the Splitter should control them.
