@@ -231,4 +231,4 @@ This is useful when the Splitter has been initialized in an invisible container 
 
     splitterObject.resize(true);
     
-On a side note, changing the the pane sizes manually is not recommended. Only the Splitter should control them.
+On a side note, changing the pane sizes manually is not recommended. Use the [`size()`](/kendo-ui/api/web/splitter#methods-size) method for that.
