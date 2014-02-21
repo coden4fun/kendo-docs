@@ -130,12 +130,22 @@ In order to resize one of the panes, use CSS to set its width or adjust the flex
     </div>
 
     <style>
-        #side-pane { width: 300px; }
-        #main-pane { -webkit-box-flex: 1000; }
+        #side-pane {
+            min-width: 300px;
+        }
+        #main-pane {
+            -webkit-box-flex: 1000;
+            -webkit-flex: 1000;
+            flex: 1000;
+        }
     </style>
     or
     <style>
-        #main-pane { -webkit-box-flex: 3; }
+        #main-pane {
+            -webkit-box-flex: 3;
+            -webkit-flex: 3;
+            flex: 3;
+        }
     </style>
 
 Additionally you can split your view to more panes by adding them directly. You can also make them stack vertically
