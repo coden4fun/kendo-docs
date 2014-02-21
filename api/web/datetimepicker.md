@@ -281,9 +281,9 @@ The template used for rendering cells in the calendar "month" view, which are ou
 
 #### Example - specify an empty cell template as a string
 
-    <input id="datepicker1" />
+    <input id="datetimepicker1" />
     <script>
-    $("#datepicker1").kendoDatePicker({
+    $("#datetimepicker1").kendoDateTimePicker({
         month: {
            empty: '-'
         }
@@ -292,9 +292,9 @@ The template used for rendering cells in the calendar "month" view, which are ou
     
 #### Example - add date value to the out-of-range cells
 
-    <input id="datepicker2" />
+    <input id="datetimepicker2" />
     <script>
-    $("#datepicker2").kendoDatePicker({
+    $("#datetimepicker2").kendoDateTimePicker({
         month: {
            empty: '<span style="color:\\#ccc;padding:0 .45em 0 .1em;">#= data.value #</span>'
         }
