@@ -277,16 +277,26 @@ shows the decades from the century
 
 ### month.empty `String`
 
-The template used for rendering the cells in the calendar "month" view, which are not in the range between
-the minimum and maximum values.
+The template used for rendering cells in the calendar "month" view, which are outside the min/max range.
 
 #### Example - specify an empty cell template as a string
 
-    <input id="datetimepicker" />
+    <input id="datepicker1" />
     <script>
-    $("#datetimepicker").kendoDateTimePicker({
+    $("#datepicker1").kendoDatePicker({
         month: {
            empty: '-'
+        }
+    });
+    </script>
+    
+#### Example - add date value to the out-of-range cells
+
+    <input id="datepicker2" />
+    <script>
+    $("#datepicker2").kendoDatePicker({
+        month: {
+           empty: '<span style="color:\\#ccc;padding:0 .45em 0 .1em;">#= data.value #</span>'
         }
     });
     </script>
