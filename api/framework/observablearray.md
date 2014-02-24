@@ -309,7 +309,7 @@ The items to add to the beginning of the `ObservableArray`.
     var array = new kendo.data.ObservableArray([2, 3]);
     var result = array.unshift(0, 1);
     console.log(result); // outputs "4"
-    console.log(result); // outputs [0, 1, 2, 3]
+    console.log(array); // outputs [0, 1, 2, 3]
     </script>
 
 ## Events
