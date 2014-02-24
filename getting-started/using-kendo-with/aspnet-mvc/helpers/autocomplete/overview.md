@@ -62,17 +62,18 @@ Here is how to configure the Kendo AutoComplete for ajax binding to the Northwin
 
 1.  Make sure you have followed all the steps from the [Introduction](/kendo-ui/getting-started/using-kendo-with/aspnet-mvc/introduction) help topic.
 2.  Create an action method which renders the view:
-    public ActionResult Index()
-    {
-        return View();
-    }
-3.  Create a new action method and pass the Products table as Json result:
-    public JsonResult GetProducts()
-    {
-        NorthwindDataContext northwind = new NorthwindDataContext();
 
-        return Json(northwind.Products, JsonRequestBehavior.AllowGet);
-    }
+        public ActionResult Index()
+        {
+            return View();
+        }
+3.  Create a new action method and pass the Products table as Json result:
+
+        public JsonResult GetProducts()
+        {
+            NorthwindDataContext northwind = new NorthwindDataContext();
+            return Json(northwind.Products, JsonRequestBehavior.AllowGet);
+        }
 4.  Add a ajax bound autocomplete:
      - WebForms
 
@@ -81,11 +82,11 @@ Here is how to configure the Kendo AutoComplete for ajax binding to the Northwin
                  .DataTextField("ProductName") //Specifies which property of the Product to be used by the autocomplete.
                  .DataSource(source =>
                  {
-                         source.Read(read =>
-                        {
-                                 read.Action("GetProducts", "Home"); //Set the Action and Controller name
-                        })
-                        .ServerFiltering(true); //If true the DataSource will not filter the data on the client.
+                    source.Read(read =>
+                    {
+                         read.Action("GetProducts", "Home"); //Set the Action and Controller name
+                    })
+                    .ServerFiltering(true); //If true the DataSource will not filter the data on the client.
                  })
              %>
      - Razor
@@ -94,13 +95,13 @@ Here is how to configure the Kendo AutoComplete for ajax binding to the Northwin
                .Name("productAutoComplete") //The name of the autocomplete is mandatory. It specifies the "id" attribute of the widget.
                .DataTextField("ProductName") //Specifies which property of the Product to be used by the autocomplete.
                .DataSource(source =>
-                 {
-                         source.Read(read =>
-                        {
-                                 read.Action("GetProducts", "Home"); //Set the Action and Controller name
-                        })
-                        .ServerFiltering(true); //If true the DataSource will not filter the data on the client.
-                 })
+                {
+                   source.Read(read =>
+                   {
+                        read.Action("GetProducts", "Home"); //Set the Action and Controller name
+                   })
+                   .ServerFiltering(true); //If true the DataSource will not filter the data on the client.
+                })
              )
 
 > **Important:** **ToDataSourceResult()** extension method will modify structure of the result and the widget will not be able to bind to it. Please return simple array of data in this case.
@@ -116,43 +117,43 @@ Here is how to configure the Kendo ComboBox to send parameters to the server:
                 .DataTextField("ProductName") //Specifies which property of the Product to be used by the autocomplete.
                 .DataSource(source =>
                 {
-                        source.Read(read =>
-                       {
-                                read.Action("GetProducts", "Home")
-									.Data("onAdditionalData");
-                       });
+                   source.Read(read =>
+                   {
+                        read.Action("GetProducts", "Home")
+                            .Data("onAdditionalData");
+                   });
                 })
          %>
          <script>
-    		function onAdditionalData() {
-		        return {
-		            text: $("#productAutoComplete").val()
-		        };
-		    }
-		</script>
+            function onAdditionalData() {
+                return {
+                    text: $("#productAutoComplete").val()
+                };
+            }
+        </script>
 
 - Razor
 
-		@(Html.Kendo().ComboBox()
+        @(Html.Kendo().ComboBox()
               .Name("productAutoComplete")
               .DataTextField("ProductName") //Specifies which property of the Product to be used by the autocomplete.
               .DataSource(source =>
               {
-                      source.Read(read =>
-                     {
-                              read.Action("GetProducts", "Home")
-				                  .Data("onAdditionalData");
-                     });
+                 source.Read(read =>
+                 {
+                      read.Action("GetProducts", "Home")
+                          .Data("onAdditionalData");
+                 });
               })
-       	)
+        )
 
-		<script>
-    		function onAdditionalData() {
-		        return {
-		            text: $("#productAutoComplete").val()
-		        };
-		    }
-		</script>
+        <script>
+            function onAdditionalData() {
+                return {
+                    text: $("#productAutoComplete").val()
+                };
+            }
+        </script>
 
 ## Accessing an Existing AutoComplete
 
