@@ -134,8 +134,10 @@ If you have deferred the initialization of the widget, make sure you get its ins
     )
     @Html.Kendo().DeferredScripts()
     <script>
-    var numeric = $("#age").data("kendoNumericTextBox");
-    numeric.value(10);
+    $(function(){
+        var numeric = $("#age").data("kendoNumericTextBox");
+        numeric.value(10);    
+    });
     </script>
 
 ## Client Templates
