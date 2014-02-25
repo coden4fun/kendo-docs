@@ -27,7 +27,7 @@ to add Telerik UI for ASP.NET MVC to the application.
 
         public ActionResult Index()
         {
-            return ListView();
+            return View();
         }
 
 1. Add a Kendo UI MobileListView to the Index view. It must be inside MobileView content
@@ -112,7 +112,7 @@ to add Telerik UI for ASP.NET MVC to the application.
 
         public ActionResult Index()
         {
-            return ListView();
+            return View();
         }
 
 1. Add a new action method which will return data to populate the listview:
