@@ -41,7 +41,7 @@ To configure Kendo ListView for ASP.NET MVC for editing follow these steps:
         
 	**Note:** Click events for elements with class name **k-edit-button** and **k-delete-button** will be automatically handled and treated by Kendo ListView as **edit** and **delete** actions.
 
-2.	*(Optional)* Define `EditorTemplate` for the model:
+2.	Define `EditorTemplate` for the model:
 
 		@model Kendo.Mvc.Examples.Models.ProductViewModel		
 		<div class="product-view">
