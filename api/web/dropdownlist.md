@@ -1224,5 +1224,5 @@ The widget instance which fired the event.
     }
     $("#dropdownlist").kendoDropDownList();
     var dropdownlist = $("#dropdownlist").data("kendoDropDownList");
-    dropdownlist.bind("select", dropdownlist_cascade);
+    dropdownlist.bind("cascade", dropdownlist_cascade);
     </script>

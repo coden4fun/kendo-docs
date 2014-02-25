@@ -1242,5 +1242,5 @@ The widget instance which fired the event.
     }
     $("#combobox").kendoComboBox();
     var combobox = $("#combobox").data("kendoComboBox");
-    combobox.bind("select", combobox_cascade);
+    combobox.bind("cascade", combobox_cascade);
     </script>
