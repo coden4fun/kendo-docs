@@ -288,6 +288,8 @@ initialize the Grid first, while its element is still visible, or initialize the
 > Due to height-related browser limitations, which cannot be avoided, **virtual scrolling works with up to a couple of million records** (depending on the browser).
 Using a larger row count than that can produce unexpected behavior or Javascript errors. In such cases, revert to standard paging.
 
+> Keyboard navigation does not work with virtual scrolling.
+
 #### Remove the vertical scrollbar
 
 When Grid scrolling is enabled, its vertical scrollbar is always visible even when not needed. This simplifies the implementation and improves performance. In cases when it is certain that a vertical scrollbar will not be
