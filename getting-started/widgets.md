@@ -250,7 +250,7 @@ It is possible to detach a previously attached event handler with the `unbind` m
     
 ## Accessing Kendo UI widget elements
 
-Each Kendo UI widget instance keeps references to two elements - `element` and `wrapper`.
+Each Kendo UI **Web** and **DataViz** widget instance keeps references to two elements - `element` and `wrapper`. Kendo UI **Mobile** widgets have an `element` reference only.
 **`element`** is the element from which the widget was initialized. Depending on the widget, it may be visible (e.g. AutoComplete, Calendar, DatePicker, etc.) or hidden (e.g. DropDownList, Upload).
 A reference to this element is also returned by the initialization statement. **`wrapper`** is the outermost element, which is part of the widget. Depending on the widget and exact scenario, the two references may match.
 For example, if the Grid is initialized from a `&lt;div&gt;`, the two references match.
