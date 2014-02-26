@@ -4740,6 +4740,66 @@ The view type to select.
     scheduler.view("month");
     </script>
 
+### view.startDate
+
+Gets the start date of given scheduler view.
+
+#### Returns
+
+`Date` the current view start date.
+
+#### Example - get the current view start date
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    var scheduler = $("#scheduler").data("kendoScheduler");
+    var view = scheduler.view();
+
+    console.log(view.startDate());
+    </script>
+
+### view.endDate
+
+Gets the end date of given scheduler view.
+
+#### Returns
+
+`Date` the current view end date.
+
+#### Example - get the current view end date
+
+    <div id="scheduler"></div>
+    <script>
+    $("#scheduler").kendoScheduler({
+      date: new Date("2013/6/6"),
+      views: [ "day", "month" ],
+      dataSource: [
+        {
+          id: 1,
+          start: new Date("2013/6/6 08:00 AM"),
+          end: new Date("2013/6/6 09:00 AM"),
+          title: "Interview"
+        }
+      ]
+    });
+    var scheduler = $("#scheduler").data("kendoScheduler");
+    var view = scheduler.view();
+
+    console.log(view.endDate());
+    </script>
+
 ## Events
 
 ### add
