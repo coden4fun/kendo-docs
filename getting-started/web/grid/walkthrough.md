@@ -178,7 +178,14 @@ This will also readjust the scrollable data area's height and no other coding is
 When Grid scrolling is enabled (by default, except for the widget MVC wrapper), the Grid `table-layout` style is set to `fixed`. This means that all width-less columns will be equally wide no matter what their content is.
 All set column widths will be obeyed no matter what the content is (if the content cannot fit, it will wrap or be clipped).
 When Grid scrolling is disabled, the Grid `table-layout` style is `auto`, i.e. the column widths are determined by the browser and cell content, if not set explicitly. The browser will try to obey all set column widths, but
-may readjust (expand) some columns, depending on their content.
+may readjust (expand) some columns, depending on their content. If needed, a fixed table layout can be applied to a non-scrollable Grid:
+
+#### Example: set fixed table layout to a non-scrollable Grid
+
+    #GridID > table /* header + data table */
+    {
+        table-layout: fixed;
+    }
 
 When creating the Grid from an HTML `table`, column widths can be set via the `col` elements.
 
@@ -205,7 +212,7 @@ side effects if the browser window size is reduced too much.
     {
         min-width: 800px;
     }
-
+    
 Using the Grid ID (Name) in the above selectors is optional, so that the styles are applied to a particular Grid instance only.
     
 ### Using a wide non-scrollable Grid
