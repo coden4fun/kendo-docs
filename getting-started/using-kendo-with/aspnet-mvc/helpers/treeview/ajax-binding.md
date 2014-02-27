@@ -8,7 +8,6 @@ publish: true
 
 # Ajax Binding
 
-
 ## Getting Started
 
 The following tutorial shows how to configure Kendo UI TreeView for ASP.NET MVC to do ajax binding using Entity Framework and the Northwind database.
