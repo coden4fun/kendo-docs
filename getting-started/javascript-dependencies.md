@@ -65,6 +65,14 @@ There should be no problem to use another minor jQuery version instead of the sp
 > Registering a new jQuery instance after the Kendo UI script files will delete all Kendo UI jQuery plugins and Javascript errors will occur.
 For more information, please refer to the [Troubleshooting page](/kendo-ui/getting-started/troubleshooting#javascript-error-that-jquery-is-unavailable-or-undefined).
 
+## Using Kendo UI and the discontinued Telerik MVC Extensions on the same page
+
+**Kendo UI** and the old **Telerik MVC Extensions** have different APIs, Javascript namespaces and CSS classes, so they can be used together with no danger of script or style conflicts.
+The only thing to consider is the **jQuery version**. The newest jQuery version that the Telerik MVC Extensions support is **1.7.2**, while new Kendo UI versions require newer jQuery versions. There are two options:
+
+* Use the Telerik MVC Extensions with jQuery **1.7.2** and an **old** Kendo UI version (e.g. Q2 2012 SP1).
+* Use the Telerik MVC Extensions with a **new** jQuery version, **[jquery-migrate](https://github.com/jquery/jquery-migrate/)**, and a **new** Kendo UI version.
+
 ## Script tag placement
 
 There is a general recommendation to place `script` tags before the closing `body` tag, so that the scripts are loaded and executed after the HTML markup. The Kendo UI widget
