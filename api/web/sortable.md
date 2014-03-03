@@ -8,9 +8,9 @@ publish: true
 
 # kendo.ui.Sortable
 
-> Sortable is available in [Q1 2014 Beta](http://demos.telerik.com/kendo-ui/Beta/web/sortable/index.html)
-
 Represents the Kendo UI Sortable. Inherits from [Widget](/kendo-ui/api/framework/widget).
+
+> Sortable is available in [Q1 2014 Beta](http://demos.telerik.com/kendo-ui/Beta/web/sortable/index.html)
 
 ## Configuration
 
