@@ -133,7 +133,10 @@ It is highly recommended to use IE's [Edge mode](http://blogs.msdn.com/b/ie/arch
 * Hybrid mouse and touch devices are supported (for instance IE10, Chrome and Firefox on Windows 8).
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 650dfb9... Included Chrome for Android in platform list
 
 >>>>>>> 650dfb9... Included Chrome for Android in platform list
 ## Prerequisites:
