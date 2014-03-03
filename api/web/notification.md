@@ -9,9 +9,9 @@ publish: true
 
 # kendo.ui.Notification
 
-> Notification is available in [Q1 2014 Beta](http://demos.telerik.com/kendo-ui/Beta/web/notification/index.html)
-
 *It is assumed that the reader of this page is familiar with the [Notification widget Overview](/kendo-ui/getting-started/web/notification/overview/).*
+
+> Notification is available in [Q1 2014 Beta](http://demos.telerik.com/kendo-ui/Beta/web/notification/index.html)
 
 ## Configuration
 

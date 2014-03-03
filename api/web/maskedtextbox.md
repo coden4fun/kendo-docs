@@ -10,9 +10,9 @@ publish: true
 
 # kendo.ui.MaskedTextBox
 
-> MaskedTextBox is available in [Q1 2014 Beta](http://demos.telerik.com/kendo-ui/Beta/web/maskedtextbox/index.html)
-
 Represents the Kendo UI MaskedTextBox widget. Inherits from [Widget](/kendo-ui/api/framework/widget).
+
+> MaskedTextBox is available in [Q1 2014 Beta](http://demos.telerik.com/kendo-ui/Beta/web/maskedtextbox/index.html)
 
 ## Configuration
 

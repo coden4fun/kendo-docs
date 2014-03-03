@@ -10,9 +10,9 @@ publish: true
 
 # Notification Overview
 
-> Notification is available in [Q1 2014 Beta](http://demos.telerik.com/kendo-ui/Beta/web/notification/index.html)
-
 The **Kendo UI Notification** provides a styled UI widget with arbitrary content, which can provide information to the user on various occasions.
+
+> Notification is available in [Q1 2014 Beta](http://demos.telerik.com/kendo-ui/Beta/web/notification/index.html)
 
 *It is assumed that the reader of this page is familiar with the [fundamental Kendo UI widget concepts](/kendo-ui/getting-started/widgets).*
 
