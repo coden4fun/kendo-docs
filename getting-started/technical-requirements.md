@@ -132,6 +132,10 @@ It is highly recommended to use IE's [Edge mode](http://blogs.msdn.com/b/ie/arch
 * Kendo UI DataViz is not supported on Android 2.x.
 * Hybrid mouse and touch devices are supported (for instance IE10, Chrome and Firefox on Windows 8).
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 650dfb9... Included Chrome for Android in platform list
 ## Prerequisites:
 
 * JavaScript must be enabled on all browsers
