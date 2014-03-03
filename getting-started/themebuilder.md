@@ -7,9 +7,9 @@ tags: themebuilder, customization, css
 publish: true
 ---
 
-### What is the Kendo ThemeBuilder?
+### What is the Kendo UI ThemeBuilder?
 
-The Kendo ThemeBuilder is a tool that lets you modify Kendo themes so that they match the look and feel of your site or app.
+The Kendo UI ThemeBuilder is a tool that lets you modify Kendo themes so that they match the look and feel of your site or app. You can test it online [here] (http://demos.telerik.com/kendo-ui/themebuilder/web.html).
 
 ### Using the ThemeBuilder on your own pages
 
@@ -27,6 +27,6 @@ Just copy the CSS output to a .css file and include it in your page.
 
 #### Using the LESS output
 
-The LESS output of the ThemeBuilder depends on the template.less theme template that is distributed along with the Kendo UI source. Save the LESS output to a .less file alongside the template.less and refer to the [official LESS documentation](http://lesscss.org/#-client-side-usage) on the various ways you can process it.
+The LESS output of the ThemeBuilder depends on the theme-template.less theme template that is distributed along with the Kendo UI source. Save the LESS output to a .less file alongside the theme-template.less and refer to the [official LESS documentation](http://lesscss.org/#-client-side-usage) on the various ways you can process it.
 
 > The common CSS files (`kendo.common.css` when using Kendo UI Web or `kendo.dataviz.css` when using Kendo UI DataViz) should always be registered on the page, even when using ThemeBuilder-generated themes.
