@@ -12,7 +12,7 @@ publish: true
 ## Methods
 
 ### bind
-Binds a HTML View to a View-Model.
+Binds a HTML View to a View-Model. 
 
 Model View ViewModel ([MVVM](http://en.wikipedia.org/wiki/Model_View_ViewModel)) is a design pattern which helps developers separate the Model from the View. The View-Model part of MVVM is responsible for
 exposing the data objects from the Model in such a way that those objects are easily consumed in the View.
