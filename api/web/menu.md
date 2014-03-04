@@ -515,7 +515,7 @@ Closes a sub-menu of a specified item(s) in a **Menu**.
 
 #### Parameters
 
-##### element `Selector`
+##### element `String|Element|jQuery`
 
 Target item selector.
 
@@ -585,7 +585,7 @@ initialization by setting the **disabled="disabled"** on the desired menu item h
 
 #### Parameters
 
-##### element `Selector`
+##### element `String|Element|jQuery`
 
 Target element
 
@@ -653,11 +653,11 @@ Inserts an item into a **Menu** after the specified referenceItem.
 
 #### Parameters
 
-##### item `Selector`
+##### item `String|Element|jQuery`
 
 Target item, specified as a JSON object. Can also handle an array of such objects.
 
-##### referenceItem `Selector`
+##### referenceItem `String|Element|jQuery`
 
 A reference item to insert the new item after.
 
@@ -721,11 +721,11 @@ Inserts an item into a **Menu** before the specified referenceItem.
 
 #### Parameters
 
-##### item `Selector`
+##### item `String|Element|jQuery`
 
 Target item, specified as a JSON object. Can also handle an array of such objects.
 
-##### referenceItem `Selector`
+##### referenceItem `String|Element|jQuery`
 
 A reference item to insert the new item before
 
@@ -764,7 +764,7 @@ Opens a sub-menu of a specified item(s) in a **Menu**.
 
 #### Parameters
 
-##### element `Selector`
+##### element `String|Element|jQuery`
 
 Target item selector.
 
@@ -803,7 +803,7 @@ Removes a specified item(s) from a **Menu**.
 
 #### Parameters
 
-##### element `Selector`
+##### element `String|Element|jQuery`
 
 Target item selector.
 

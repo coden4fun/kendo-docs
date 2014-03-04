@@ -398,12 +398,12 @@ Appends an item/s to the PanelBar.
 
 #### Parameters
 
-##### item `Selector`
+##### item `String|Element|jQuery`
 
 Target item, specified as the JSON representation of an object. You can pass item text, content or
 contentUrl here. Can handle an HTML string or array of such strings or JSON.
 
-##### referenceItem `Selector`
+##### referenceItem `String|Element|jQuery`
 
 A reference item to append the new item in the PanelBar, can be omitted.
 
@@ -446,7 +446,7 @@ Collapses the specified item(s) of a **PanelBar**.
 
 #### Parameters
 
-##### element `Selector`
+##### element `String|Element|jQuery`
 
 The **PanelBar** item(s) to be collapsed, expressed as a string containing a selector
 expression or represented by a [jQuery selector](http://api.jquery.com/category/selectors/).
@@ -575,7 +575,7 @@ Expands the specified item(s) of a **PanelBar**.
 
 #### Parameters
 
-##### element `Selector`
+##### element `String|Element|jQuery`
 
 The **PanelBar** item(s) to be expanded, expressed as a selector.
 
@@ -647,11 +647,11 @@ Inserts a PanelBar item after the specified referenceItem
 
 #### Parameters
 
-##### item `Selector`
+##### item `String|Element|jQuery`
 
 Target item, specified as a JSON object. You can pass item text, content or contentUrl here. Can handle an HTML string or array of such strings or JSON.
 
-##### referenceItem `Selector`
+##### referenceItem `String|Element|jQuery`
 
 A reference item to insert the new item after
 
@@ -713,12 +713,12 @@ Inserts a PanelBar item before the specified referenceItem
 
 #### Parameters
 
-##### item `Selector`
+##### item `String|Element|jQuery`
 
 Target item, specified as a JSON object. You can pass item text, content or contentUrl here. Can handle an
 TML string or array of such strings or JSON.
 
-##### referenceItem `Selector`
+##### referenceItem `String|Element|jQuery`
 
 A reference item to insert the new item before.
 
@@ -757,7 +757,7 @@ Reloads the content of a **PanelBar** from an AJAX request.
 
 #### Parameters
 
-##### element `Selector`
+##### element `String|Element|jQuery`
 
 Target element
 
