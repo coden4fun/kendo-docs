@@ -243,5 +243,24 @@ A lot of interactive tutorials are available in the [Kendo UI Dojo](http://tryke
 -   [PHP examples](https://github.com/telerik/kendo-examples-php)
 -   [Ruby on Rails examples](https://github.com/telerik/kendo-examples-rails)
 
+## Help Us Improve Kendo UI Documentation, Samples, Tutorials and Demos
 
+The Kendo UI team would LOVE your help to improve our documentation. We encourage you to contribute in the way that you choose:
 
+### Submit a New Issue at GitHub
+
+[Open](https://github.com/telerik/kendo-docs/issues?state=open) a new issue on the topic if it does not exist already.
+
+When creating an issue, please provide a descriptive title, be as specific as possible and link to the document in question.
+If you can provide a link to the closest anchor to the issue, that is even better.
+
+### Update the Documentation at GitHub
+
+This is the most direct method. Follow [the contribution instructions](https://github.com/telerik/kendo-docs/blob/master/readme.md). The basic steps are that you fork our documentation and submit a pull request. That way you can contribute to exactly where you found the error and our technical writing team just needs to approve your change request. Please use only standard Markdown and follow the directions at the link. If you find an issue in the docs, or even feel like creating new content, we are happy to have your contributions!
+
+### Forums
+
+You can also go to the [Kendo UI Forums](http://www.telerik.com/forums) and leave feedback.
+This method will take a bit longer to reach our documentation team, but if you like the accountability of forums and you want a fast reply from our amazing support team, leaving feedback in the Kendo UI forums guarantees that your suggestion has a support number and that weâ€™ll follow up on it.
+
+Thank you for contributing to the Kendo UI community!
