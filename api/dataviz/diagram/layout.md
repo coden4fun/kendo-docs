@@ -1,10 +1,7 @@
 ---
-title: kendo.dataviz.diagram.Layout
-meta_title: Layout in Kendo Diagram widget with its options
-meta_description: General discussion of Layout in the diagram widget and the API Reference for the layout options
-slug: api-framework
-tags: api,framework,diagram,layout,tree layout,force layout,layered layout
-publish: false
+title:kendo.dataviz.diagram.Layout
+slug:api-dataviz-diagram-layout
+publish: true
 ---
 
 # kendo.dataviz.diagram.Layout
