@@ -7,6 +7,7 @@ publish: true
 # kendo.dataviz.diagram.Connection
 
 The Connection object is a visual link or connection in the graph or diagram.
+Connections are usually created by calling [connect](/kendo-ui/api/dataviz/diagram#methods-connect) on a Diagram instance.
 
 ## Configuration
 
@@ -20,9 +21,14 @@ Defines the stroke or line color of the connection.
 
 #### Example - setting the stroke of a Connection
 
-    var s1 = diagram.addShape(new Point(100, 100));
-    var s2 = diagram.addShape(new Point(400, 100));
-    var conn = diagram.connect(s1,s2, {stroke:"red"});
+    <div id="diagram"></div>
+    <script>
+        var Point = kendo.dataviz.diagram.Point;
+        var diagram = $("#diagram").kendoDiagram({ }).getKendoDiagram();
+        var shapeA = diagram.addShape(new Point(100, 100));
+        var shapeB = diagram.addShape(new Point(400, 100));
+        var connection = diagram.connect(shapeA, shapeB, { stroke: { color: "red" } });
+    </script>
 
 ### hover `Object`
 
@@ -32,19 +38,27 @@ Defines the hover configuration.
 
 Defines the hover stroke configuration.
 
-### hover.stroke.color `String` *(default: "#70CAFF")*
+### hover.stroke.color `String`
 
 Defines the highlight color when the pointer is hovering over the connection.
 
 #### Example setting color and hovering color of the connection
 
-    var s1 = diagram.addShape(new Point(100, 100));
-    var s2 = diagram.addShape(new Point(400, 100));
-    var conn = diagram.connect(s1,s2,
-            {
-                stroke:"red",
-                hoveredStroke: "blue"
-            });
+    <div id="diagram"></div>
+    <script>
+        var Point = kendo.dataviz.diagram.Point;
+        var diagram = $("#diagram").kendoDiagram({ }).getKendoDiagram();
+        var shapeA = diagram.addShape(new Point(100, 100));
+        var shapeB = diagram.addShape(new Point(400, 100));
+        var connection = diagram.connect(shapeA, shapeB, {
+            stroke: { color: "red" },
+            hover: {
+                stroke: {
+                    color: "blue"
+                }
+            }
+        });
+    </script>
 
 ### startCap `String` *(default: "FilledCircle")*
 
@@ -62,24 +76,29 @@ The start cap (arrow, head or decoration) of the connection:
 * "ArrowEnd": a filled arrow
 * "FilledCircle": a filled circle
 
-Note that you can also use the "ArrowStart" for the endCap but its direction will be inversed. Much like the startCap example above, you can define custom caps (markers) for the endpoint of the connection.
+Note that you can also use the "ArrowStart" for the endCap but its direction will be inversed.
 
 ### points `Array`
 
-Sets the intermediate points (in global coordinates) of the connection. It's important to note that currently these points cannot be manipulated in the interface.
+Sets the intermediate points (in global coordinates) of the connection.
 
 #### Example - setting intermediate connection points
 
 ![Intermediate connection points.](connectionPoints.png)
 
-    var con = diagram.connect(new Point(100,100), new Point(300,100), {
-        points: [
-            new Point(150,100),
-            new Point(150,150),
-            new Point(200,150),
-            new Point(200,100)
-        ]
-    });
+    <div id="diagram"></div>
+    <script>
+        var Point = kendo.dataviz.diagram.Point;
+        var diagram = $("#diagram").kendoDiagram({ }).getKendoDiagram();
+        var connection = diagram.connect(new Point(100,100), new Point(300,100), {
+            points: [
+                new Point(150,100),
+                new Point(150,150),
+                new Point(200,150),
+                new Point(200,100)
+            ]
+        });
+    </script>
 
 ### points.x `Number`
 
@@ -93,12 +112,13 @@ Sets the Y coordinate of the point.
 
 ### source
 
-Get/set method which returns the current source of the connection if no parameter is supplied and sets the source if an object is given. This object can be a Point for a floating endpoint (i.e. not attached to a shape), a Shape or a Connector of a Shape. You can use the Shape.getConnector() method to fetch a Connector on the basis of its name. If a Shape is specified the Connection will attach to the "Auto" connector.
+Gets or sets the current source of the connection.
 
+This object can be a Point for a floating endpoint (i.e. not attached to a shape), a Shape or a Connector of a Shape. You can use the Shape.getConnector() method to fetch a Connector on the basis of its name. If a Shape is specified the Connection will attach to the "Auto" connector.
 
 #### Parameters
 
-##### source `Shape|Point|Connector`
+##### source `kendo.dataviz.diagram.Shape|kendo.dataviz.diagram.Point|kendo.dataviz.diagram.Connector`
 
 * Point: any Point on the canvas. This creates an unattached floating endpoint.
 * Shape: will bind the endpoint to the"Auto" Connector which will switch between the other connectors to minimize the length of the connection.
@@ -106,18 +126,46 @@ Get/set method which returns the current source of the connection if no paramete
 
 If no source is specified the method will return the current object to which the Connection's endpoint is attached.
 
+#### Returns
+
+`Object` the connection source.
+
 ### sourcePoint
 
-Returns the global coordinate of the connection's start (initial endpoint). The method returns a Point independently of the object to which the source is attached.
+Gets the global coordinate of the connection's start (initial endpoint).
+The method returns a Point independently of the object to which the source is attached.
 
+#### Returns
+
+`kendo.dataviz.diagram.Point` the coordinates of the connection source.
 
 ### target
 
-Similar to the source, this gets or set the target of the Connection. The parameters and considerations are identical in both cases.
+Gets or set the target of the Connection.
+
+This object can be a Point for a floating endpoint (i.e. not attached to a shape), a Shape or a Connector of a Shape. You can use the Shape.getConnector() method to fetch a Connector on the basis of its name. If a Shape is specified the Connection will attach to the "Auto" connector.
+
+#### Parameters
+
+##### target `kendo.dataviz.diagram.Shape|kendo.dataviz.diagram.Point|kendo.dataviz.diagram.Connector`
+
+* Point: any Point on the canvas. This creates an unattached floating endpoint.
+* Shape: will bind the endpoint to the"Auto" Connector which will switch between the other connectors to minimize the length of the connection.
+* Connector: the connection's endpoint will remain fixed attached to the specified Connector.
+
+If no source is specified the method will return the current object to which the Connection's endpoint is attached.
+
+#### Returns
+
+`Object` the connection target.
 
 ### targetPoint
 
 Similar to the sourcePoint, this gets the coordinates of the target of the Connection independently of its endpoint attachement.
+
+#### Returns
+
+`kendo.dataviz.diagram.Point` the coordinates of the connection target.
 
 ### select
 
@@ -127,32 +175,45 @@ Select or deselects the Connection.
 
 ##### value `Boolean` *(default: true)*
 
-True to select the Connection and 'false' to deselect it.
+True to select the Connection and `false` to deselect it.
 
 ### bounds
 
 Gets the bounds of the Connection.
 
+#### Returns
+
+`kendo.dataviz.diagram.Rect` the bounding rectangle of the connection.
+
 ### type
 
-Gets or sets the (sub-) type of the Connection which defines the way it routes. The routing of a connection is the way that intermediate points of a Connection defines a route. A route is usually defined on the basis of constraints or behaviors. Currently the framework defines a default polyline route (which simply connects the given intermediate points) and a simple rectangular (aka cascading) route. The cascading type is useful when using tree layout and hierarchies; the routed Connection will in this case enhance the representation of the hierarchy and thus reproduce a classic organization diagram.
+Gets or sets the (sub-) type of the Connection which defines the way it routes.
+
+The routing of a connection is the way that intermediate points of a Connection defines a route. A route is usually defined on the basis of constraints or behaviors. Currently the framework defines a default polyline route (which simply connects the given intermediate points) and a simple rectangular (aka cascading) route. The cascading type is useful when using tree layout and hierarchies; the routed Connection will in this case enhance the representation of the hierarchy and thus reproduce a classic organization diagram.
 
 #### Parameters
 
 ##### value `String` *(default: "Polyline")*
 
-* "Polyline": connects the defined intermediate points. See the points() method.
-*  "Cascading": discards given points and defines a cascading path between the endpoints.
+* "Polyline" - connects the defined intermediate points. See the points() method.
+* "Cascading" - discards given points and defines a cascading path between the endpoints.
 
 ### points
 
+Gets the intermediate points of the connection.
+
+#### Returns
+
+`Array` the intermediate points of the connection.
+
 ### allPoints
 
-Returns all points of the Connection, i.e. the union of the endpoints and the intermediate points.
+Gets all points of the Connection.
+This is the union of the endpoints and the intermediate points.
 
-### serialize
+#### Returns
 
-Returns a serialized JSON representation of the Connection.
+`Array` all points of the connection.
 
 ### redraw
 
@@ -160,17 +221,19 @@ Redraws the Connection with the given options.
 
 ##### Example - changing the Connection after it has been added
 
-![Connection redraw.](connectionRedraw.PNG)
+![Connection redraw.](connectionRedraw.png)
 
-    var con = diagram.connect(new Point(10,10), new Point(200,70));
-    con.redraw({
-        content: "Label",
-        stroke: {
-            color: "orange"
-        },
-        points:[new Point(200,10)]
-    });
+    <div id="diagram"></div>
+    <script>
+        var Point = kendo.dataviz.diagram.Point;
+        var diagram = $("#diagram").kendoDiagram({ }).getKendoDiagram();
+        var connection = diagram.connect(new Point(10,10), new Point(200,70));
 
-### refresh
+        connection.redraw({
+            stroke: {
+                color: "orange"
+            },
+            points:[new Point(200,10)]
+        });
+    </script>
 
-This refreshes the visuals, the connectors and bounds. The method is part of the object hierarchy, is automatically called when dependencies change and should not be called unless you have customized the Connection.
