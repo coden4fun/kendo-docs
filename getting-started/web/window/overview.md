@@ -210,3 +210,34 @@ The above remarks only apply to the case when the Window is *not* using an `ifra
 
 Unlike most other widgets, the Kendo UI Window is **completely removed from the DOM** when [destroyed](/kendo-ui/getting-started/widgets#destroying-kendo-ui-widgets).
 This means that the element, from which it was initialized, no longer exists on the page, so a new Window instance can be created only from another element.
+
+## Printing the Window contents
+
+The CSS code below can be used to hide all the page content and leave only the Window content visible during printing.
+The code assumes that only one Window instance exists on the page and it is a child of the `body`, i.e. the `appendTo` option is **not** used.
+If there are multiple Window instances on the page and only one should be printed, then the `.k-window` class below should be replaced by a custom CSS class, which is applied to the Window wrapper element manually.
+
+    @media print
+    {
+        body > *
+        {
+            display: none !important;
+        }
+        
+        body > .k-window
+        {
+            display: block !important;
+            position: relative !important;
+            top: auto !important;
+            left: auto !important;
+            width: auto !important;
+            height: auto !important;
+            border-width: 0;
+            box-shadow: none !important;
+        }
+        
+        .k-window .k-window-titlebar
+        {
+            display: none;
+        }
+    }
