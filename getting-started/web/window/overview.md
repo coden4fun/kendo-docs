@@ -142,7 +142,7 @@ The Window creates an `iframe` for its content if the content URL contains a pro
 If the URL does not contain s protocol, the assumption is that it is a local URL that will load a partial view (not a full page), so an iframe is not created.
 This behavior can be controlled explicitly via the widget configuration.
 
-> Loading full pages inside the Window without an iframe is incorrect. This will break the page HTML validation and will cause undesired side effects and Javascript errors.
+> Loading full pages inside the Window without an iframe is incorrect. This will break the page HTML markup and will cause undesired side effects and Javascript errors.
 
 > Loading partial content inside an iframe is incorrect as well.
 
