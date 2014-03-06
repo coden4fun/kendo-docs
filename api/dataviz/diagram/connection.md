@@ -57,31 +57,6 @@ The start cap (arrow, head or decoration) of the connection:
 * "ArrowStart": a filled arrow
 * "FilledCircle": a filled circle
 
-You easily add custom caps through the underlying mechanism of SVG called 'markers' (see e.g. [the SVG documentation](http://www.w3.org/TR/SVG/painting.html "SVG markers.")).
-
-#### Example - custom connection caps
-
-This defines and adds a custom cap (a small square) to the diagram canvas and is referred to in the connection options.
-
-![Custom square cap.](customCap.png)
-
-     var con = diagram.connect(new Point(100,100), new Point(300,100));
-
-     diagram.canvas.addMarker(new kendo.diagram.Marker({
-        path: {
-            data: "m20,20l0,60l60,0l0,-60z",
-            background: "Black"
-        },
-        id: "custom",
-        orientation: "auto",
-        width: 15,
-        height: 15,
-        ref: new Point(50, 50),
-        viewBox: new kendo.diagram.Rect(0,0,100,100)
-    }));
-
-    con.redraw({startCap: "custom"});
-
 ### endCap `String` *(default: "ArrowEnd")*
 
 The start cap (arrow, head or decoration) of the connection:

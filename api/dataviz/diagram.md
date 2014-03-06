@@ -277,12 +277,6 @@ The start cap (arrow, head or decoration) of the connection:
 * "ArrowStart": a filled arrow
 * "FilledCircle": a filled circle
 
-#### Example - custom connection caps
-
-This defines and adds a custom cap (a small square) to the diagram canvas and is referred to in the connection options.
-
-![Custom square cap.](diagram/customCap.png)
-
 ### connectionDefaults.endCap `String` *(default: "ArrowEnd")*
 
 The start cap (arrow, head or decoration) of the connection:
@@ -291,7 +285,7 @@ The start cap (arrow, head or decoration) of the connection:
 * "ArrowEnd": a filled arrow
 * "FilledCircle": a filled circle
 
-Note that you can also use the "ArrowStart" for the endCap but its direction will be inversed. Much like the startCap example above, you can define custom caps (markers) for the endpoint of the connection.
+Note that you can also use the "ArrowStart" for the endCap but its direction will be inversed.
 
 ### connections `Array`
 
@@ -329,12 +323,6 @@ The start cap (arrow, head or decoration) of the connection:
 * "ArrowStart": a filled arrow
 * "FilledCircle": a filled circle
 
-#### Example - custom connection caps
-
-This defines and adds a custom cap (a small square) to the diagram canvas and is referred to in the connection options.
-
-![Custom square cap.](diagram/customCap.png)
-
 ### connections.endCap `String` *(default: "ArrowEnd")*
 
 The start cap (arrow, head or decoration) of the connection:
@@ -343,7 +331,7 @@ The start cap (arrow, head or decoration) of the connection:
 * "ArrowEnd": a filled arrow
 * "FilledCircle": a filled circle
 
-Note that you can also use the "ArrowStart" for the endCap but its direction will be inversed. Much like the startCap example above, you can define custom caps (markers) for the endpoint of the connection.
+Note that you can also use the "ArrowStart" for the endCap but its direction will be inversed.
 
 ### connections.points `Array`
 
