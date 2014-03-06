@@ -2423,7 +2423,10 @@ The data field containing the point category name.
 
 ### series.color `String|Function`
 
-The series base color.
+The series base color. The supported values are:
+
+* CSS color string, including hex and rgb
+* function(point) - user-defined function that will be evaluated for each point. Returning `undefined` will assume the default series color.
 
 #### Example
 

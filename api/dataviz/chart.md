@@ -7967,7 +7967,10 @@ The data field containing the close value.
 
 ### series.color `String|Function`
 
-The series base color. Accepts a valid CSS color string, including hex and rgb.
+The series base color. The supported values are:
+
+* CSS color string, including hex and rgb
+* function(point) - user-defined function that will be evaluated for each point. Returning `undefined` will assume the default series color.
 
 #### Example - set the chart series color as a hex string
     <div id="chart"></div>

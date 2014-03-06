@@ -1601,7 +1601,10 @@ The data field containing the close value.
 
 ### navigator.series.color `String`
 
-The series base color.
+The series base color. The supported values are:
+
+* CSS color string, including hex and rgb
+* function(point) - user-defined function that will be evaluated for each point. Returning `undefined` will assume the default series color.
 
 ### navigator.series.colorField `String`
 
@@ -5268,7 +5271,10 @@ The data field containing the close value.
 
 ### series.color `String|Function`
 
-The series base color.
+The series base color. The supported values are:
+
+* CSS color string, including hex and rgb
+* function(point) - user-defined function that will be evaluated for each point. Returning `undefined` will assume the default series color.
 
 #### Example
 
