@@ -140,6 +140,8 @@ The subtype further defines the layout type by specifying in greater detail the 
 
 Either the distance between the siblings if the tree is up/down or between levels if the tree is left/right. In *tipOver tree layout* this setting is used only for the direct children of the root
 
+![Tree parameters](diagram/treeParameters.png)
+
 ### layout.verticalSeparation `Number` *(default: 50)*
 
 Either the distance between levels if the tree is up/down or between siblings if the tree is left/right. This property is **not used** in *tipOver tree layout* but rather replaced with three additional ones - **underneathVerticalTopOffset**, **underneathVerticalSeparation** and **underneathHorizontalOffset**
@@ -193,7 +195,7 @@ In the **layered layout** it defines the minimum distance between nodes on the s
 ### layout.grid `Object`
 
 Each layout algorithm has a different set of parameters customizing the layout but they also all have a common collection of parameters which relate to the way 'pieces' of a diagram are organized.
-![Diagram component](diagram/ComponentExample.png)
+![Diagram component](diagram/componentExample.png)
 
 A diagram can have in general disconnected pieces, known as components, which can be organized in a way independent of the way a component on its own is arranged. In the picture above, this is one diagram consisting of four components.
 
@@ -203,27 +205,27 @@ When you apply a certain layout an analysis will first split the diagram in comp
 
 ### layout.grid.width `Number` *(default: 1500)*
 
-defines the width of the grid. The bigger this parameter the more components will be organized in an horizontal row. How many components really depends on your diagram and they type of layout applied to each component. The default is set to 800.
+Defines the width of the grid. The bigger this parameter the more components will be organized in an horizontal row. How many components really depends on your diagram and they type of layout applied to each component. The default is set to 800.
 
 ### layout.grid.offsetX `Number` *(default: 50)*
 
-defines the left offset of the grid layout. The default is 50.
+Defines the left offset of the grid layout. The default is 50.
 
 ### layout.grid.offsetY `Number` *(default: 50)*
 
-defines the top offset of the grid layout. The default is 50.
+Defines the top offset of the grid layout. The default is 50.
 
 ### layout.grid.componentSpacingX `Number` *(default: 50)*
 
-defines the horizontal spacing between each component. The default is 50.
+Defines the horizontal spacing between each component. The default is 50.
 
 ### layout.grid.componentSpacingY `Number` *(default: 50)*
 
-defines the vertical spacing between each component. The default is 50.
+Defines the vertical spacing between each component. The default is 50.
 
 ### layout.layerSeparation `Number` *(default: 50)*
 
-the height (in a vertical layout) or width (in a horizontal layout) between the layers.
+The height (in a vertical layout) or width (in a horizontal layout) between the layers.
 
 ### template `String|Function` *(default: "")*
 
