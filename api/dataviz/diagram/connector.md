@@ -18,18 +18,27 @@ Defines the width of the connector.
 
 Defines the height of the connector.
 
-### background `String` *(default: "Yellow")*
+### background `String`
 
-Defines the background color of the Connector. The Connector visual is by default an SVG Ellipse and all connectors are children of the same SVG Group. This background color is the SVG fill attribute of the Ellipse.
+Defines the background color of the Connector.
 
-### hoveredBackground `String` *(default: "#70CAFF")*
+### hoveredBackground `String`
 
 Defines the color of the Connector when the pointer hovers over it.
 
-### cssClass `String` *(default: "k-connector")*
-
-Defines the CSS class of the SVG visual representing the Connector.
+## Methods
 
 ### position
 
-Returns the position in global coordinates of the Connector.
+Gets or sets the position of the Connector.
+
+#### Parameters
+
+##### position `kendo.dataviz.diagram.Point`
+
+The current position of the connector.
+
+#### Returns
+
+`kendo.dataviz.diagram.Point` the current position of the connector.
+
