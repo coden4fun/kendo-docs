@@ -36,7 +36,7 @@ Gets or sets the position of the Connector.
 
 ##### position `kendo.dataviz.diagram.Point`
 
-The current position of the connector.
+The new position of the connector.
 
 #### Returns
 
